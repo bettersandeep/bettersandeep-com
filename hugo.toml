@@ -6,7 +6,7 @@ theme = 'hugo-coder'
 [params]
 author = "Sandeep Singh"
 colorScheme = "dark"
-hideColorSchemeToggle = true
+hideColorSchemeToggle = false
 HeadTitle = "Sandeep Singh's personal website"
 since = "1998"
 info = "A backend engineer with interest in infra, data and systems based out of Bengaluru, India"
