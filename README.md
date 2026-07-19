@@ -9,7 +9,7 @@ Built with [Hugo](https://gohugo.io/) using the [hugo-coder](https://github.com/
 - Hugo (extended) for the static site
 - hugo-coder theme, pulled in as a git submodule at `themes/hugo-coder`
 - Cloudflare Workers for hosting, configured via `wrangler.toml`
-- `build.sh` installs the toolchain (Dart Sass, Go, Hugo, Node.js) and builds the site on Cloudflare's build machines
+- `build.sh` installs Hugo and builds the site on Cloudflare's build machines
 
 ## Local development
 

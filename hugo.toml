@@ -4,17 +4,19 @@ title = 'Sandeep Singh'
 theme = 'hugo-coder'
 
 [params]
+author = "Sandeep Singh"
 colorScheme = "dark"
 hideColorSchemeToggle = true
 HeadTitle = "Sandeep Singh's personal website"
 since = "1998"
 info = "A backend engineer with interest in infra, data and systems based out of Bengaluru, India"
+avatarURL = "images/avatar.png"
 
 [[params.social]]
   name = "Github"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
-  url = "https://github.com/singhksandeep25"
+  url = "https://github.com/bettersandeep"
 [[params.social]]
   name = "Instagram"
   icon = "fa-brands fa-instagram fa-2x"
@@ -34,7 +36,7 @@ info = "A backend engineer with interest in infra, data and systems based out of
   name = "Email"
   icon = "fa-solid fa-envelope fa-2x"
   weight = 5
-  url = "contact@bettersandeep.com"
+  url = "mailto:contact@bettersandeep.com"
 [[params.social]]
   name = "Strava"
   icon = "fa-brands fa-strava fa-2x"
