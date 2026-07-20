@@ -44,12 +44,16 @@ avatarURL = "images/avatar.png"
   url = "https://strava.com/athletes/38010951"
 
 [[menu.main]]
-  name = "Blog"
+  name = "Tech"
   weight = 1
-  url  = "posts/"
+  url  = "tech/"
+[[menu.main]]
+  name = "Thoughts"
+  weight = 2
+  url = "thoughts/"
 [[menu.main]]
   name = "About"
-  weight = 2
+  weight = 3
   url = "about/"
 [markup.highlight]
 style = "monokai"
