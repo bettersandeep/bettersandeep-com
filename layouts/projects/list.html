@@ -1,0 +1,32 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container page">
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+      </h1>
+    </header>
+    {{ .Content }}
+    <div class="projects">
+      {{ range .Params.projects }}
+        <article class="project">
+          <a href="{{ .repo }}" class="project-shot">
+            <img src="{{ .image | relURL }}" alt="{{ .alt }}" width="960" height="600" loading="lazy">
+          </a>
+          <div class="project-body">
+            <h2><a href="{{ .repo }}">{{ .name }}</a></h2>
+            <p>{{ .summary }}</p>
+            <ul class="project-stack">
+              {{ range .stack }}<li>{{ . }}</li>{{ end }}
+            </ul>
+            <a class="project-link" href="{{ .repo }}">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
+            </a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

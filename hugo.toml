@@ -11,6 +11,7 @@ HeadTitle = "Sandeep Singh's personal website"
 since = "1998"
 info = "A backend engineer with interest in infra, data and systems based out of Bengaluru, India"
 avatarURL = "images/avatar.png"
+customSCSS = ["scss/projects.scss"]
 
 [[params.social]]
   name = "Github"
@@ -36,7 +37,7 @@ avatarURL = "images/avatar.png"
   name = "Email"
   icon = "fa-solid fa-envelope fa-2x"
   weight = 5
-  url = "mailto:contact@bettersandeep.com"
+  url = "mailto:sandeep@bettersandeep.com"
 [[params.social]]
   name = "Strava"
   icon = "fa-brands fa-strava fa-2x"
@@ -52,8 +53,12 @@ avatarURL = "images/avatar.png"
   weight = 2
   url = "thoughts/"
 [[menu.main]]
-  name = "About"
+  name = "Side Projects"
   weight = 3
+  url = "projects/"
+[[menu.main]]
+  name = "About"
+  weight = 4
   url = "about/"
 [markup.highlight]
 style = "monokai"
