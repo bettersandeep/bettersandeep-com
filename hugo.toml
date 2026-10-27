@@ -37,7 +37,7 @@ customSCSS = ["scss/projects.scss"]
   name = "Email"
   icon = "fa-solid fa-envelope fa-2x"
   weight = 5
-  url = "mailto:contact@bettersandeep.com"
+  url = "mailto:sandeep@bettersandeep.com"
 [[params.social]]
   name = "Strava"
   icon = "fa-brands fa-strava fa-2x"
