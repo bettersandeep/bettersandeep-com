@@ -1,0 +1,92 @@
+@import "variables";
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  gap: 3.2rem;
+  margin: 3.2rem 0;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $alt-bg-color;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  .project-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 2rem 2rem;
+  }
+
+  h2 {
+    margin: 1.6rem 0 0.8rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  // beats the theme's justified `.content article p`
+  .project-body p {
+    margin: 0 0 1.6rem;
+    text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: auto 0 1.6rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.2rem 1rem;
+      border-radius: 1rem;
+      font-size: 1.4rem;
+      background-color: $alt-bg-color;
+    }
+  }
+
+  .project-link {
+    font-weight: 700;
+  }
+}
+
+@mixin projects_dark {
+  .project {
+    border-color: $alt-bg-color-dark;
+
+    .project-stack li {
+      background-color: $alt-bg-color-dark;
+    }
+  }
+}
+
+body.colorscheme-dark {
+  @include projects_dark();
+}
+
+body.colorscheme-auto {
+  @media (prefers-color-scheme: dark) {
+    @include projects_dark();
+  }
+}
