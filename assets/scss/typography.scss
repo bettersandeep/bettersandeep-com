@@ -1,0 +1,28 @@
+// Geist Serif ships one weight, so block faux bold everywhere; theme bold text renders Regular
+@font-face {
+  font-family: "Geist Serif";
+  src: url("/fonts/GeistSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+$serif: "Geist Serif", "Times New Roman", Times, serif;
+
+html {
+  font-synthesis: style;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navigation a,
+.navigation span,
+.list ul li .title,
+.pagination {
+  font-family: $serif;
+}
