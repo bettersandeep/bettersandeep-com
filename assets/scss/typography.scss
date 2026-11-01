@@ -26,3 +26,22 @@ h6,
 .pagination {
   font-family: $serif;
 }
+
+// Serif strokes are thin: one size up, and brighter text in dark mode
+body {
+  font-size: 1.9em;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.7em;
+  }
+}
+
+body.colorscheme-dark {
+  color: #e6e6e6;
+}
+
+body.colorscheme-auto {
+  @media (prefers-color-scheme: dark) {
+    color: #e6e6e6;
+  }
+}
