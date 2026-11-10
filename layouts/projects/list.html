@@ -11,19 +11,23 @@
     {{ .Content }}
     <div class="projects">
       {{ range .Params.projects }}
+        {{ $href := .repo }}{{ with .page }}{{ $href = relURL . }}{{ end }}
         <article class="project">
-          <a href="{{ .repo }}" class="project-shot">
+          <a href="{{ $href }}" class="project-shot">
             <img src="{{ .image | relURL }}" alt="{{ .alt }}" width="960" height="600" loading="lazy">
           </a>
           <div class="project-body">
-            <h2><a href="{{ .repo }}">{{ .name }}</a></h2>
+            <h2><a href="{{ $href }}">{{ .name }}</a></h2>
             <p>{{ .summary }}</p>
             <ul class="project-stack">
               {{ range .stack }}<li>{{ . }}</li>{{ end }}
             </ul>
-            <a class="project-link" href="{{ .repo }}">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
-            </a>
+            <div class="project-links">
+              {{ with .page }}<a class="project-link" href="{{ . | relURL }}">Read more</a>{{ end }}
+              <a class="project-link" href="{{ .repo }}">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub
+              </a>
+            </div>
           </div>
         </article>
       {{ end }}
