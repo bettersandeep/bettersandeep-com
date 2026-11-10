@@ -1,6 +1,15 @@
 +++
 title = "Side Projects"
-description = "Things I build outside work: macOS utilities, tools for Claude and a game."
+description = "Things I build outside work: macOS utilities, AI agent tools and a game."
+
+[[projects]]
+name = "Grimoire"
+image = "images/projects/grimoire.webp"
+alt = "Grimoire banner: every number in the answer has a receipt"
+summary = "Hermes Agent plugin to ask your data files anything. DuckDB answers with one SQL query, every number in the reply is checked against the results, and a Data page gives charts and data health with 0 tokens."
+stack = ["Python", "DuckDB", "Hermes"]
+repo = "https://github.com/bettersandeep/grimoire"
+page = "projects/grimoire/"
 
 [[projects]]
 name = "pragmatic"

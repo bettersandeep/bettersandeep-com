@@ -66,6 +66,12 @@
     }
   }
 
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+  }
+
   .project-link {
     font-weight: 700;
   }
@@ -88,5 +94,14 @@ body.colorscheme-dark {
 body.colorscheme-auto {
   @media (prefers-color-scheme: dark) {
     @include projects_dark();
+  }
+}
+
+// the data-health screenshot is a narrow 2x crop; at full width its text is much larger than the other shots
+.page img[src$="data-health.webp"] {
+  max-width: 50%;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
   }
 }
